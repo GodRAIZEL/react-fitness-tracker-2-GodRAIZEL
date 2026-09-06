@@ -1,0 +1,9 @@
+{
+  "short_name": "PACE",
+  "name": "PACE — Fitness Tracker & Workout Planner",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1B1F23",
+  "background_color": "#F2EFE9"
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
+  <rect width="400" height="250" fill="#F2EFE9"/>
+  <polyline points="40,125 120,125 145,80 175,170 205,60 235,125 360,125"
+            fill="none" stroke="#FF5A36" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="200" y="210" font-family="Arial, sans-serif" font-size="20" font-weight="700"
+        fill="#6B7280" text-anchor="middle" letter-spacing="2">CARDIO</text>
+</svg>

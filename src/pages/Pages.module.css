@@ -1,0 +1,146 @@
+.pageIntro {
+  color: var(--steel);
+  max-width: 640px;
+}
+
+.hero {
+  padding: var(--space-6) 0 var(--space-4);
+}
+
+.eyebrow {
+  color: var(--ember);
+  margin-bottom: var(--space-2);
+}
+
+.heroCopy {
+  max-width: 560px;
+  color: var(--steel);
+  font-size: 1.05rem;
+  margin-top: var(--space-3);
+}
+
+.heroActions {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.heroBtnPrimary,
+.heroBtnSecondary {
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.heroBtnPrimary {
+  background: var(--ember);
+  color: var(--white);
+}
+
+.heroBtnSecondary {
+  background: transparent;
+  color: var(--cinder);
+  border: 2px solid var(--cinder);
+}
+
+.heroBtnPrimary:hover,
+.heroBtnSecondary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.scoreboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--space-3);
+  background: var(--cinder);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-4);
+  margin: var(--space-4) 0;
+}
+
+.scoreCell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.scoreNumber {
+  font-size: 2.4rem;
+  color: var(--ember);
+}
+
+.scoreLabel {
+  color: var(--chalk-dim);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.sectionTitle {
+  margin: var(--space-4) 0 var(--space-3);
+  color: var(--steel);
+}
+
+.motivationSection {
+  margin-top: var(--space-5);
+}
+
+.audioGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-3);
+}
+
+.sortLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--steel);
+  margin: var(--space-2) 0 0;
+}
+
+.sortLabel select {
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--chalk-dim);
+}
+
+.notFoundPage {
+  text-align: center;
+  padding: var(--space-7) var(--space-3);
+}
+
+.notFoundPage h1 {
+  font-size: 6rem;
+  color: var(--ember);
+}
+
+.notFoundBtn {
+  margin-top: var(--space-4);
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: none;
+  background: var(--cinder);
+  color: var(--chalk);
+  font-weight: 700;
+}
+
+/* Tablet (768px-1024px): a 4-column scoreboard is cramped at this width,
+   so drop to 2 columns - same treatment as mobile, but the hero and
+   audio grid keep their wider auto-fit layout since they still have
+   room to breathe. */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .scoreboard { grid-template-columns: repeat(2, 1fr); }
+  .heroCopy { max-width: 480px; }
+}
+
+@media (max-width: 767px) {
+  .scoreboard { grid-template-columns: repeat(2, 1fr); }
+}

@@ -1,0 +1,188 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: var(--space-4);
+}
+
+.cardImage {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background: var(--chalk-dim);
+  display: block;
+}
+
+.cardInner {
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.category {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--steel);
+  font-weight: 700;
+}
+
+.meta {
+  color: var(--steel);
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+.badgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.addRow {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dayPickerLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--steel);
+}
+
+.dayPickerLabel select {
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--chalk-dim);
+  font-weight: 600;
+  flex: 1;
+}
+
+.detailImage {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  background: var(--chalk-dim);
+}
+
+.detailAddRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.detailAddRow select {
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--chalk-dim);
+  font-weight: 600;
+}
+
+.filterBar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: var(--space-3) 0;
+}
+
+.filterBar select {
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--chalk-dim);
+  background: var(--white);
+  font-weight: 600;
+}
+
+.clearFiltersBtn {
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: var(--ember);
+  color: var(--white);
+  font-weight: 700;
+}
+
+.error {
+  background: #fdeceb;
+  color: var(--ember-dark);
+  border: 1px solid var(--ember);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+}
+
+.detailWrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.detailHeader h1 {
+  margin-top: 8px;
+}
+
+.sectionLabel {
+  margin-top: var(--space-3);
+  color: var(--steel);
+}
+
+.instructionsList {
+  padding-left: 22px;
+  line-height: 1.8;
+}
+
+.detailNav {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.detailNav button {
+  background: none;
+  border: 2px solid var(--cinder);
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-weight: 600;
+}
+
+.detailNav button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.notFoundInline {
+  text-align: center;
+  padding: var(--space-6);
+}
+
+/* Tablet (768px-1024px): a tighter 2-column grid, roomier than mobile's
+   single column but not as wide as the desktop auto-fill grid. */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .detailImage {
+    max-height: 260px;
+  }
+}
+
+@media (max-width: 767px) {
+  .grid { grid-template-columns: 1fr; }
+  .detailNav { flex-direction: column; }
+  .dayPickerLabel { flex-direction: column; align-items: stretch; }
+}

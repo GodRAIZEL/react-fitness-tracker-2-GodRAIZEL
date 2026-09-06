@@ -1,0 +1,137 @@
+.logWrap {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: var(--space-4);
+}
+
+.logForm {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  height: fit-content;
+}
+
+.logForm label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--steel);
+}
+
+.logForm input,
+.logForm select {
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--chalk-dim);
+  font-size: 0.95rem;
+}
+
+.formRow {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formRow label {
+  flex: 1;
+}
+
+.historySection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.historyList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.logEntry {
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logMeta {
+  margin: 2px 0 0;
+  color: var(--steel);
+  font-size: 0.8rem;
+}
+
+.logRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logRight button {
+  background: none;
+  border: none;
+  color: var(--steel);
+  font-size: 1.1rem;
+}
+
+.chartWrap {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  height: 200px;
+  padding: var(--space-3);
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.chartCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  gap: 4px;
+}
+
+.chartBar {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  min-height: 4px;
+  transition: height var(--transition-med);
+}
+
+.chartValue {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.chartLabel {
+  font-size: 0.72rem;
+  color: var(--steel);
+  text-transform: uppercase;
+}
+
+/* Tablet (768px-1024px): keep the two-column layout but shrink the form
+   column so the history list has more breathing room at this width. */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .logWrap { grid-template-columns: 280px 1fr; }
+}
+
+@media (max-width: 767px) {
+  .logWrap { grid-template-columns: 1fr; }
+}
